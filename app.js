@@ -20,4 +20,4 @@ const fetchContent = function() {
 }
 
 
-document.querySelector('#fetchBtn').addEventListener('click', fetchContent)
+document.querySelector('#fetchBtn').addEventListener('click', fetchContent);
