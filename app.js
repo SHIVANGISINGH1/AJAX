@@ -16,6 +16,11 @@ const fetchContent = function () {
     console.log(response);
     document.querySelector(".image img").src = response.message;
   };
+
+  // handling errors
+  xhrRequest.onerror = function (error) {
+      console.log(error)
+  }
 };
 
 document.querySelector("#fetchBtn").addEventListener("click", fetchContent);
@@ -50,7 +55,9 @@ function printList() {
         }
       }
     },
-  });
+  }).fail(function(error) {
+      console.log(error)
+  })
 }
 
 $.get("https://dog.ceo/api/breed/hound/images/random", function (data) {
