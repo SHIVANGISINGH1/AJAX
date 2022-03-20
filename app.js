@@ -52,3 +52,7 @@ function printList() {
     },
   });
 }
+
+$.get("https://dog.ceo/api/breed/hound/images/random", function (data) {
+  $(".image2 img").attr("src", data.message);
+});
